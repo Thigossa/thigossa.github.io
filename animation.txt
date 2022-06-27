@@ -1,0 +1,83 @@
+/*
+ * Home animation
+*/
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.m-scene {
+  /** Basic styles for an animated element */
+  .scene_element {
+    animation-duration: 0.25s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+  }
+  /** An element that fades in */
+  .scene_element--fadein {
+    animation-name: fadeIn;
+  }
+  /** An element that fades in and slides up */
+  .scene_element--fadeinup {
+    animation-name: fadeInUp;
+  }}
+&.is-exiting {
+      .scene_element {
+        animation-direction: alternate-reverse;
+      }
+}
+;(function ($) {
+  'use strict';
+  var content  = $('#main').smoothState({
+        // onStart runs as soon as link has been activated
+        onStart : {
+          
+          // Set the duration of our animation
+          duration: 250,
+          
+          // Alterations to the page
+          render: function () {
+
+            // Quickly toggles a class and restarts css animations
+            content.toggleAnimationClass('is-exiting');
+          }
+        }
+      }).data('smoothState'); // makes public methods available
+})(jQuery);
+;(function ($) {
+  'use strict';
+  var $body    = $('html, body'), // Define jQuery collection 
+      content  = $('#main').smoothState({
+        onStart : {
+          duration: 250,
+          render: function () {
+            content.toggleAnimationClass('is-exiting');
+            
+            // Scroll user to the top
+            $body.animate({ 'scrollTop': 0 });
+
+          }
+        }
+      }).data('smoothState');
+})(jQuery);
+
+
+<div class="m-scene" id="main">
+  <div class="m-header scene_element scene_element--fadein">
+  </div>
+  <div class="m-page scene_element scene_element--fadeinup">
+  </div>
+</div>

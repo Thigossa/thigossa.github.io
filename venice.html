@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="hr-HR" class="footer-sticky-1">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--<meta http-equiv="X-UA-Compatible" content="ie-edge">-->
+<title>dot2dot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+	* {
+	  box-sizing: border-box;
+	}
+	.columnl {
+	  float: left;
+	  width: 70%;
+	  padding: 10px;
+	  height: 300px;
+	  margin-top: 65px;
+	}
+	.row {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap; 
+	flex-wrap: wrap;
+	padding: 0 4px;
+	}
+	.columnr {
+	  float: right;
+	  width: 30%;
+	  padding: 10px;
+	  height: 300px;
+	  margin-top: 65px;
+	}
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+	.columnl img {
+	vertical-align: middle;
+	width: 100%;
+	}
+	@media screen and (max-width: 800px) {
+	.columnl {
+		-ms-flex: 50%;
+		flex: 50%;
+		max-width: 50%;
+		}
+	}
+	@media screen and (max-width: 600px) {
+	.row {
+      	flex-direction: column;
+    }
+	.columnr {
+		-ms-flex: 100%;
+		flex: 100%;
+		max-width: 100%;
+		order: 1;
+	}
+	.columnl {
+		-ms-flex: 100%;
+		flex: 100%;
+		max-width: 100%;
+		float:left;
+		vertical-align: text-top;
+		width: 100%;
+		order: 2;
+		}
+	}
+	</style>
+
+</head>
+
+<body>
+	<div id="wrap">
+		<nav id="navigacija" class="navbar">
+			<div class="logo">
+				<picture>
+				  <source media="(max-width:650px)" srcset="slike/PajkanovicNikolalogo-tockice.svg">
+				  <source media="(max-width:465px)" srcset="slike/PajkanovicNikolalogo-tockice.svg">
+				<a href="index.html"><img style="float:left" id="logo" alt="Logo" src="slike/PajkanovicNikolalogo-tockice.svg"></a>
+				</picture>
+			</div>
+			<button type="button" class="btn-hamburger" data-action="nav-toggle" id="navtoggle">
+			<span id="caretnew"></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			</button>
+			<ul class="nav-menu">
+				<li class="nav-item"><a id="homeb" href="index.html">Početna</a></li>
+				<li class="nav-item"><a href="about.html">O nama</a></li>
+				<li class="nav-item dropdown" id="dropdownmeni">
+					<a data-action="dropdown-toggle" class="active" id="droptoggle">Projekti</a>
+					<div class="dropdown-menu">
+						<div id="dropdroptoggle">
+						<a class="dropdown-item" href="dtp.html">DTP</a>
+						<div id="dropdrop">
+							<a class="dropdown-dropdown-item" href="knjiga.html">Harfa izdanja knjiga</a>
+							<a class="dropdown-dropdown-item" href="kuharica.html">JUTRA kuharica</a>
+							<a class="dropdown-dropdown-item" href="slikovnica.html">Slikovnice Harfa</a>
+							<a class="dropdown-dropdown-item" href="acr.html">ACR pano</a>
+						</div></div>
+						<div id="dropdroptoggle">
+						<a class="dropdown-item" href="DigitalPublishing.html">Digital publishing</a>
+						<div id="dropdrop">
+							<a class="dropdown-dropdown-item" href="rijekaday.html">Rijeka Day+</a>
+							<a class="dropdown-dropdown-item" href="riviera.html">Opatija Riviera</a>
+							<a class="dropdown-dropdown-item" href="venice.html">Venice</a>
+							<a class="dropdown-dropdown-item" href="tuscany.html">Tuscany</a>
+						</div></div>
+						<div id="dropdroptoggle">
+						<a class="dropdown-item" href="WebDesign.html">Web design</a>
+						<div id="dropdrop">
+							<a class="dropdown-dropdown-item" href="pametnica.html">Pametnica</a>
+							<a class="dropdown-dropdown-item" href="posh.html">POSH</a>
+							<a class="dropdown-dropdown-item" href="altamarea.html">Alta Marea</a>
+							<a class="dropdown-dropdown-item" href="pametnica.html">Pametnica Sveznalica</a>
+						</div></div>
+						<div id="dropdroptoggle">
+						<a class="dropdown-item" href="Print.html">Print</a>
+						<div id="dropdrop">
+							<a class="dropdown-dropdown-item" href="uzpr.html">UZOR</a>
+							<a class="dropdown-dropdown-item" href="terra.html">TERRA</a>
+							<a class="dropdown-dropdown-item" href="mentori.html">MentoRI</a>
+							<a class="dropdown-dropdown-item" href="pilc.html">PILC</a>
+						</div></div>
+					</div>
+				</li>
+				<li class="nav-item" id="contactss"><a href="index.html#contact">Kontakt</a></li>
+			</ul>
+		</nav></div>
+
+	<div class="row" style="margin-top: 100px;">
+		<div class="columnl" >
+			<picture>
+				<source media="(min-width:650px)" srcset="slike/V-1.jpg">
+				<source media="(min-width:465px)" srcset="slike/V-1.jpg">
+				<img src="slike/V-1.jpg" alt="Venice1" style="max-width:100%">
+			</picture> 
+			<picture>
+				<source media="(min-width:650px)" srcset="slike/V-2.jpg">
+				<source media="(min-width:465px)" srcset="slike/V-2.jpg">
+				<img src="slike/V-2.jpg" alt="Venice2" style="max-width:100%">
+			</picture> 
+			<picture>
+				<source media="(min-width:650px)" srcset="slike/V-3.jpg">
+				<source media="(min-width:465px)" srcset="slike/V-3.jpg">
+				<img src="slike/V-3.jpg" alt="Venice3" style="max-width:100%">
+			</picture> 
+<picture>
+				<source media="(min-width:650px)" srcset="slike/V-4.jpg">
+				<source media="(min-width:465px)" srcset="slike/V-4.jpg">
+				<img src="slike/V-4.jpg" alt="Venice4" style="max-width:100%">
+			</picture> 
+			
+			  
+		</div>
+		<div class="columnr">
+			<hr id="hredit"/>
+			<p style="font-size: 12px;">KLIJENT</p>
+			<p div="righttxt" style="font-size: 18px;">Praxis Rijeka</p>
+			<hr id="hredit"/>
+			<p style="font-size: 12px;">OPIS PROJEKTA:</p>
+		  	<p>Mobilna aplikacija couch surfing sadržaja objavljena na AppStoreu i namjenjena tablet uređajima - Idejno rješenje aplikacije, izgradnja strukture, organizacija i obrada multimedijalnog sadržaja, dizajn sučelja, izgradnja aplikacije i objavljivanje na AppStore</p>
+			<hr id="hredit"/>
+		</div>
+	  </div>
+<script type="text/javascript" src="navjs.js"></script>
+</body>
+</html>
+

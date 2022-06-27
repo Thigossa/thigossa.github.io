@@ -1,0 +1,4 @@
+web sjediste: https://thigossa.github.io/index.html
+logo: PajkanovicNikolalogo-tockice.svg
+video: https://thigossa.github.io/about.html
+vlastita autorska grafika: https://thigossa.github.io/about.html (galerija)
